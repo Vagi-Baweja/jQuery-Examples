@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<title>JQuery Examples</title>
+<style>
+.cool
+{
+color:magenta;
+}
+.hot
+{
+color:red;
+}
+.superCool
+{
+font-size:40pt;
+}
+.superSmallCool
+{
+font-size:12pt;
+}
+</style>
+<script src='jquery/jquery.js'></script>
+<script>
+$(()=>{
+$("#someSection > div").addClass("cool");
+$("#someSection div:not('.cool')").addClass("hot");  //selctors ka code hai jquery mai 
+$("#someSection div.cool").addClass("superCool");
+$("#someSection div.hot").addClass("superSmallCool");
+$("input[tmtm]").css("color","blue");  //vo input jiske sath type attribute specified hai
+$("input[tmtm=ok]").css("font-size", "24pt"); 
+$("input[tmtm=good]").css("font-size", "40pt"); 
+$("input[tmtm^=good]").css("font-size", "25pt");  
+$("input[tmtm$=dog]").css("font-size", "5pt");  // ^ & $ are the regular expression bsacially ^ means starting with like in this example word startign with good apply font size as 25pt and $ means ending with so word dog ending with will change its font size to 5pt  
+//$("li:eq(1)").css("color","yellow");  //eq means indexing 1 ( 0 1 2 3 4 5) 
+//$("li:even").css("color","yellow");  // will color yellow on even places
+//$("li:odd").css("color","yellow"); // will color yellow on odd place
+$("li:nth-child(3)").css("color","yellow"); 
+});
+</script>
+</head>
+<body>
+<div id='someSection'>
+<div>
+What is this
+<div>
+This is done
+</div>
+</div>
+<div>
+What to do ?
+<div>
+No need to do anything
+</div>
+</div>
+<input type='text' tmtm='ok' value='One'> <br>
+<input type='text' value='Two'> <br>
+<input type='text' tmtm='good' value='Three'> <br>
+<input type='text' tmtm='good boy' value='Four'> <br>
+<input type='text' tmtm='good dog' value='Five'> <br>
+<input type='text' value='Six'> <br>
+<ul>
+<li>Ujjain</li>
+<li>Indore</li>
+<li>Goa</li>
+<li>Mumbai</li>
+<li>Agra</li>
+<li>Pune</li>
+<li>New Delhi</li>
+</ul>
+</div>
+</body>
+</html>
