@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<title>JQuery Examples</title>
+<style>
+.tbl
+{
+border : 1px solid black;
+border-collapse: collapse;
+}
+</style>
+<script src='jquery/jquery.js'></script>
+<script>
+$(()=>{
+$("table").addClass("tbl");
+$("table th").addClass("tbl");
+$("table td").addClass("tbl");
+$("table thead").css("background","gray");
+$("table thead").css("color","white");
+$("table thead").css("border","1px solid black");
+$("table th:nth-child(1)").css("border-right","1px solid white");
+$("table th:nth-child(2)").css("border-right","1px solid white");
+$("table tbody tr").filter(":even").css("background","lightgray");
+$("table tbody tr").filter(":even").css("color","black");
+$("table tbody td:contains('Delhi')").css("color","red");
+$("table tbody td:contains('Vagi')").next().css("color","blue");
+$("table tbody td:contains('5.')").nextAll().css("color","yellow");
+$("table tbody td:contains('3.')").nextAll().addBack().css("color","magenta");
+$("table tbody td:contains('Ankur')").parent().css("font-weight","bold");
+$("table tbody td:contains('Pune')").children().css("font-size","20pt");
+
+});
+</script>
+</head>
+<table>
+<thead>
+<tr>
+<th>S.No</th>
+<th>Name</th>
+<th>City</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td><td>Apurva</td><td>Delhi</td>
+</tr>
+
+<tr>
+<td>2.</td><td>Vagi</td><td>Ambala</td>
+</tr>
+
+<tr>
+<td>3.</td><td>Mehak</td><td>Surat</td>
+</tr>
+
+<tr>
+<td>4.</td><td>Sakshi</td><td>Pune <span> (Gray World of Joy)</span></td>
+</tr>
+
+<tr>
+<td>5.</td><td>Chintu</td><td>Pune</td>
+</tr>
+
+<tr>
+<td>6.</td><td>Ankur</td><td>Delhi</td>
+</tr>
+
+<tr>
+<td>7.</td><td>Ankit</td><td>Gwalior</td>
+</tr>
+
+</tbody>
+</table>
+<body>
+</body>
+</html>
